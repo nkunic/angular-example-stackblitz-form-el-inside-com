@@ -22,27 +22,21 @@ export class AppComponent implements OnInit {
           value: '',
           disabled: false,
         },
-        Validators.required
+        [Validators.minLength(3), Validators.required]
       ),
       email: new FormControl(
         {
           value: '',
           disabled: false,
         },
-        [ 
-          Validators.required,
-          Validators.pattern("[^ @]*@[^ @]*") 
-        ]
+        [Validators.required, Validators.pattern('[^ @]*@[^ @]*')]
       ),
       age: new FormControl(
         {
           value: '',
           disabled: false,
         },
-        [
-          Validators.maxLength(3),
-          Validators.required
-        ]
+        [Validators.maxLength(3), Validators.required]
       ),
     });
   }
