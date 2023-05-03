@@ -1,0 +1,9 @@
+.button {
+  color: white;
+  &:not(.button--disabled) {
+    background-color: green;
+  }
+  &.button--disabled {
+    background-color: red;
+  }
+}

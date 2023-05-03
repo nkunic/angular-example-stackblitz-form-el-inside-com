@@ -11,7 +11,5 @@ export class InputComponent {
   @Input() inputId!: string;
   @Input() inputName!: string;
   @Input() inputType!: string;
-  @Input() inputSize!: string;
-  @Input() inputStatus!: string;
   @Input() inputPlaceholder!: string;
 }

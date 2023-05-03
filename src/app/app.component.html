@@ -2,25 +2,21 @@
   <form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <app-input
       [formGroup]="myForm"
-      [inputFormControlName]="myForm.get('name')"
       [inputId]="'name'"
       [inputName]="'name'"
+      [inputFormControlName]="'name'"
       [inputType]="'text'"
-      [inputSize]="'small'"
-      [inputStatus]="'default'"
       [inputPlaceholder]="'Enter your name'"
     >
     </app-input>
-
+    
     <div class="mt-2">
       <app-input
         [formGroup]="myForm"
-        [inputFormControlName]="myForm.get('age')"
         [inputId]="'age'"
         [inputName]="'age'"
+        [inputFormControlName]="'age'"
         [inputType]="'number'"
-        [inputSize]="'small'"
-        [inputStatus]="'default'"
         [inputPlaceholder]="'Enter your age'"
       >
       </app-input>
