@@ -6,10 +6,5 @@
     [type]="inputType"
     [placeholder]="inputPlaceholder"
     class="input"
-    [ngClass]="[
-      (inputFormControlName.valid && inputFormControlName.touched) ? 'is-valid' : '',
-      (inputFormControlName.invalid && inputFormControlName.touched) ? 'is-invalid' : ''
-    ]"
-
   />
 </div>
