@@ -1,63 +1,32 @@
-<!--
-  <div class="d-flex p-4">
-  <form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <input 
-      type="text" 
-      formControlName="name" 
-      placeholder="Name" />
-    <input
-      type="email"
-      formControlName="email"
-      placeholder="Email"
-      class="mt-2"
-    />
-    <input
-      type="password"
-      formControlName="password"
-      placeholder="Password"
-      class="mt-2"
-    />
-    <input 
-      type="number" 
-      formControlName="age" 
-      placeholder="Age" 
-      class="mt-2" />
-    <button 
-      type="submit" 
-      [disabled]="myForm.invalid" 
-      (click)="onSubmit()" 
-      class="mt-2">
-      Submit
-    </button>
-  </form>
-</div>
--->
-
 <div class="d-flex p-4">
   <form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <app-input
-      [formGroup]="myForm" 
+      [formGroup]="myForm"
+      [inputFormControlName]="myForm.get('name')"
       [inputId]="'name'"
       [inputName]="'name'"
-      [inputFormControlName]="myForm.get('name')"
       [inputType]="'text'"
+      [inputSize]="'small'"
+      [inputStatus]="'default'"
       [inputPlaceholder]="'Enter your name'"
     >
     </app-input>
+
     <div class="mt-2">
       <app-input
         [formGroup]="myForm"
+        [inputFormControlName]="myForm.get('age')"
         [inputId]="'age'"
         [inputName]="'age'"
-        [inputFormControlName]="myForm.get('age')"
         [inputType]="'number'"
-        [inputPlaceholder]="'Enter your age'">
+        [inputSize]="'small'"
+        [inputStatus]="'default'"
+        [inputPlaceholder]="'Enter your age'"
+      >
       </app-input>
     </div>
     <div class="mt-2">
-      <app-button 
-        [buttonIsDisabled]="!myForm.valid" 
-        (clickEvent)="onSubmit()">
+      <app-button [buttonIsDisabled]="!myForm.valid" (clickEvent)="onSubmit()">
       </app-button>
     </div>
   </form>

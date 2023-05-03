@@ -9,7 +9,6 @@ import {
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   myForm!: FormGroup;
@@ -25,8 +24,6 @@ export class AppComponent implements OnInit {
         },
         Validators.required
       ),
-      email: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
       age: new FormControl(
         {
           value: '',
