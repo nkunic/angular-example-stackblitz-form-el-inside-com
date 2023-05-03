@@ -1,0 +1,15 @@
+.input {
+  border-width: 2px;
+  border-style: solid;
+  &:focus {
+    outline: 0;
+  }
+  &.ng-touched {
+    &.ng-valid {
+      border-color: green;
+    }
+    &.ng-invalid {
+      border-color: red;
+    }
+  }
+}

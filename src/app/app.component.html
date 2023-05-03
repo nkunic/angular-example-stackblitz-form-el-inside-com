@@ -9,7 +9,17 @@
       [inputPlaceholder]="'Enter your name'"
     >
     </app-input>
-    
+    <div class="mt-2">
+      <app-input
+        [formGroup]="myForm"
+        [inputId]="'email'"
+        [inputName]="'email'"
+        [inputFormControlName]="'email'"
+        [inputType]="'email'"
+        [inputPlaceholder]="'Enter your email'"
+      >
+      </app-input>
+    </div>
     <div class="mt-2">
       <app-input
         [formGroup]="myForm"

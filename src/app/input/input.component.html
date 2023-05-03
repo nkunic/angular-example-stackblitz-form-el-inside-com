@@ -5,9 +5,11 @@
     [formControlName]="inputFormControlName"
     [type]="inputType"
     [placeholder]="inputPlaceholder"
-    [ngClass]="{
-      'is-invalid': inputFormControlName.invalid && inputFormControlName.touched,
-      'is-valid': inputFormControlName.valid && inputFormControlName.touched,
-    }"
+    class="input"
+    [ngClass]="[
+      (inputFormControlName.valid && inputFormControlName.touched) ? 'is-valid' : '',
+      (inputFormControlName.invalid && inputFormControlName.touched) ? 'is-invalid' : ''
+    ]"
+
   />
 </div>
