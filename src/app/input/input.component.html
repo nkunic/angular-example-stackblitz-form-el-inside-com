@@ -6,5 +6,9 @@
     [type]="inputType"
     [placeholder]="inputPlaceholder"
     class="input"
+    [ngClass]="{
+      'input--danger': inputFormControlName.invalid && inputFormControlName.touched,
+      'input--success': inputFormControlName.valid && inputFormControlName.touched,
+    }"
   />
 </div>

@@ -4,8 +4,12 @@
   &:focus {
     outline: 0;
   }
-  &.input--danger {}
-  &.input--danger {}
+  &.input--success {
+    border-color: green;
+  }
+  &.input--danger {
+    border-color: red;
+  }
   &.ng-touched {
     &.ng-valid {
       border-color: green;
