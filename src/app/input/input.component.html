@@ -6,5 +6,9 @@
     [type]="inputType"
     [placeholder]="inputPlaceholder"
     class="input"
+    [disabled]="inputIsDisabled"
+    [ngClass]="[
+      inputIsDisabled ? 'input--disabled' : ''
+    ]"
   />
 </div>

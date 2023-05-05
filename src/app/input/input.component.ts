@@ -13,4 +13,5 @@ export class InputComponent {
   @Input() inputName!: string;
   @Input() inputType!: string;
   @Input() inputPlaceholder!: string;
+  @Input() inputIsDisabled: boolean = false;
 }
